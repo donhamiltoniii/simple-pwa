@@ -1,6 +1,4 @@
-var cachePrefix = 'simple-pwa-v'
-var cacheNumber = 0
-var cacheName = cachePrefix + cacheNumber
+var cacheName = 'simple-pwa-v1'
 var filesToCache = ['/', '/index.html', '/app.js', '/style.css']
 
 self.addEventListener('install', event => {
@@ -28,4 +26,13 @@ self.addEventListener('activate', event => {
 		})
 	)
 	return self.clients.claim()
+})
+
+self.addEventListener('fetch', event => {
+	console.log('[ServiceWorker] Fetch', event.request.url)
+	event.respondWith(
+		caches.match(event.request).then(response => {
+			return response || fetch(event.request)
+		})
+	)
 })
