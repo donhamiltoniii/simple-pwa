@@ -1,7 +1,7 @@
-const cachePrefix = 'simple-pwa-v'
-let cacheNumber = 0
-const cacheName = cachePrefix + cacheNumber
-const filesToCache = ['/', '/index.html', '/app.js', '/style.css']
+var cachePrefix = 'simple-pwa-v'
+var cacheNumber = 0
+var cacheName = cachePrefix + cacheNumber
+var filesToCache = ['/', '/index.html', '/app.js', '/style.css']
 
 self.addEventListener('install', event => {
 	console.log('[ServiceWorker] Install')
