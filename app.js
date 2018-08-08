@@ -1,4 +1,4 @@
-loadServiceWorker()
+run()
 
 function loadServiceWorker() {
 	if ('serviceWorker in navigator') {
@@ -6,4 +6,8 @@ function loadServiceWorker() {
 			.register('./service-worker.js')
 			.then(() => console.log('Service Worker Registered'))
 	}
+}
+
+function run() {
+	loadServiceWorker()
 }
