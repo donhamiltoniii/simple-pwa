@@ -1,5 +1,5 @@
 var cacheName = 'simple-pwa-v1'
-var filesToCache = ['index.html', 'app.js', 'style.css']
+var filesToCache = ['./', './index.html', './app.js', './style.css']
 
 self.addEventListener('install', event => {
 	console.log('[ServiceWorker] Install')
