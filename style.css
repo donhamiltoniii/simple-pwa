@@ -8,3 +8,9 @@ html {
 	color: #39add1;
 	font: 20px/1.618 sans-serif;
 }
+
+.container {
+	margin: 0 auto;
+	max-width: 1000px;
+	width: 90%;
+}
